@@ -8,7 +8,6 @@ export default function CompleteScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Avis</Text>
         <Text style={styles.label}>Notez votre experience</Text>
         <View style={styles.starRow}>
           {stars.map((star) => (
@@ -29,7 +28,6 @@ export default function CompleteScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: palette.background },
   content: { padding: 20, gap: 12 },
-  title: { fontSize: 28, color: palette.accent, fontWeight: '800' },
   label: { fontSize: 16, color: palette.text },
   starRow: { flexDirection: 'row', gap: 8 },
   star: { fontSize: 30, color: '#d4a136' },

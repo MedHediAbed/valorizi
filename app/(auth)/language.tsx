@@ -1,11 +1,15 @@
+import { useNavigation } from '@react-navigation/native';
 import { router } from 'expo-router';
-import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { AppLogo, BackChevron } from '@/components/wireframe-ui';
 import { AppLanguage, useAppContext } from '@/context/app-context';
 import { translations } from '@/constants/translations';
 import { palette } from '@/constants/ui';
 
 export default function LanguageScreen() {
   const { setLanguage } = useAppContext();
+  const navigation = useNavigation();
 
   const onSelectLanguage = (lang: AppLanguage) => {
     setLanguage(lang);
@@ -13,9 +17,16 @@ export default function LanguageScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
-        <Text style={styles.logo}>Valorizi</Text>
+    <SafeAreaView style={styles.container} edges={['top', 'left', 'right']}>
+      <ScrollView contentContainerStyle={styles.content}>
+        <View style={styles.topBar}>
+          <BackChevron
+            onPress={() => {
+              if (navigation.canGoBack()) navigation.goBack();
+            }}
+          />
+        </View>
+        <AppLogo size={48} />
         <Text style={styles.subtitle}>{translations.fr.chooseLanguage}</Text>
         <View style={styles.buttonGroup}>
           <Pressable style={styles.languageButton} onPress={() => onSelectLanguage('fr')}>
@@ -25,21 +36,15 @@ export default function LanguageScreen() {
             <Text style={styles.buttonLabel}>العربية</Text>
           </Pressable>
         </View>
-      </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: palette.background },
-  content: { flex: 1, paddingHorizontal: 28, justifyContent: 'center' },
-  logo: {
-    fontSize: 50,
-    color: palette.primary,
-    fontWeight: '800',
-    textAlign: 'center',
-    marginBottom: 16,
-  },
+  topBar: { paddingHorizontal: 16, paddingTop: 4 },
+  content: { flexGrow: 1, paddingHorizontal: 28, justifyContent: 'center', paddingBottom: 24 },
   subtitle: {
     textAlign: 'center',
     fontSize: 22,

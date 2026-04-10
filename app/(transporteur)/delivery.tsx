@@ -7,7 +7,6 @@ export default function DeliveryScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Statut: Delivered</Text>
         <View style={styles.codeCard}>
           <Text style={styles.codeLabel}>Code de confirmation</Text>
           <Text style={styles.code}>{mission.code}</Text>
@@ -23,7 +22,6 @@ export default function DeliveryScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: palette.background },
   content: { padding: 20, gap: 16 },
-  title: { fontSize: 28, color: palette.accent, fontWeight: '800' },
   codeCard: { backgroundColor: '#fff', borderRadius: 12, borderWidth: 1, borderColor: palette.border, padding: 16 },
   codeLabel: { fontSize: 16, color: '#666' },
   code: { marginTop: 8, fontSize: 34, color: palette.primary, letterSpacing: 4, fontWeight: '800' },

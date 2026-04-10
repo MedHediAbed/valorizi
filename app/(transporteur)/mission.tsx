@@ -7,7 +7,6 @@ export default function MissionScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
-        <Text style={styles.title}>Mission</Text>
         <View style={styles.card}>
           <Text style={styles.strong}>{mission.from}</Text>
           <Text style={styles.arrow}>→</Text>
@@ -24,7 +23,6 @@ export default function MissionScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: palette.background },
   content: { padding: 20, gap: 16 },
-  title: { fontSize: 28, color: palette.accent, fontWeight: '800' },
   card: { backgroundColor: '#fff', borderRadius: 12, borderWidth: 1, borderColor: palette.border, padding: 18 },
   strong: { fontSize: 18, color: palette.text, fontWeight: '700' },
   arrow: { fontSize: 24, marginVertical: 6, color: palette.primary },
