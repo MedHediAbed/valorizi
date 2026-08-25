@@ -1,50 +1,58 @@
-# Welcome to your Expo app 👋
+# Valorizi
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Valorizi is a circular-economy mobile platform designed to connect businesses that generate organic waste with local actors who can valorize it through composting, biogas production, and mushroom cultivation.
 
-## Get started
+The platform brings together different stakeholders such as waste producers, transporters, and valorization partners in one mobile ecosystem.
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- User authentication
+- Dedicated interfaces for different user roles:
+  - Producers
+  - Transporters
+  - Valorization partners
+- User profile management
+- Contact and communication features
+- Notification settings
+- Privacy and language settings
+- Mobile-first responsive interface
+- Circular-economy workflow between waste producers and recovery actors
 
-2. Start the app
+## Tech Stack
 
-   ```bash
-   npx expo start
-   ```
+- **React Native**
+- **Expo / Expo Go**
+- **TypeScript**
+- **Expo Router**
+- **React Context API**
+- **TSX**
+- **ESLint**
+- **Figma** for UI/UX design
 
-In the output, you'll find options to open the app in a
+## Project Structure
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+The application uses a role-based architecture with separate navigation flows for:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- `(auth)` — authentication
+- `(producteur)` — organic-waste producers
+- `(transporteur)` — transport partners
+- `(valorisateur)` — waste valorization actors
+- `(tabs)` — main application navigation
 
-## Get a fresh project
+## Project Background
 
-When you're ready, run:
+Valorizi was developed as part of the **Smart2Gether** initiative and was awarded **1st Place at the Smart2Gether Hackathon**.
 
-```bash
-npm run reset-project
-```
+## My Contribution
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Co-founded the project
+- Contributed to the mobile application development
+- Participated in UI/UX design and prototyping
+- Helped define the platform architecture and user workflows
+- Researched potential partners, sponsors, and stakeholders
+- Contributed to the business model and project strategy
+- Participated in the final pitch and project presentation
 
-## Learn more
+## Impact
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Valorizi aims to reduce organic waste by creating a digital connection between businesses producing waste and local actors capable of transforming it into valuable resources such as compost, biogas, and materials for mushroom cultivation.
